@@ -16,8 +16,10 @@ Obsidian-style `[[internal linking]]` is preserved and transformed into clickabl
 
 ## Screenshots
 
-*Homepage showing blog listing with Last Read sidebar widget*
+*A Dev Notes showing article listing with Last Read sidebar widget*
 ![Dev notes homepage](public/screenshots/listing_1.png)
+
+*A Travel Blog*
 ![Travel blog homepage](public/screenshots/listing_2.png)
 
 *Individual page*
@@ -46,7 +48,7 @@ export const siteConfig = {
 ```
 
 The app will automatically scan for `.md` files in the specified folder and create routes based on the file structure.
-For testing, we are using the folders `dev-content` and `travel-content` shipped with this demo.
+For testing, we are using the folders `dev-content` shipped with this demo. Another folder `travel-content` is also provided.
 
 ## Future
 - Image support (Not tested)
