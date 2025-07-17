@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Obsidian-Style Knowledge Base
+
+A sample Next.js application that transforms an Obsidian vault of markdown files into a blog.
+
+Transform your collection of markdown notes into a fully functional blog. Simply point the app to any folder containing markdown files and watch as your notes become a navigable website with a clean homepage listing all your articles.
+
+Obsidian-style `[[internal linking]]` is preserved and transformed into clickable web links, maintaining the interconnected nature of your knowledge base. As you read through different articles, the app tracks your reading history in a convenient sidebar widget, helping you pick up where you left off.
+
+## Demonstrated Skills
+
+- **Next.js Rendering Strategy - Static Site Generation** -  SSG is used for the rarely changing content pages. Pages are pre-built at build time.
+- **Client-side Rendering for user-specific features** - CSR is used for the user-specific and frequently updated feature of tracking reading history.
+- **React Patterns** - Custom hooks to encapsulate state logic and localStorage persistence. 
+- **TypeScript**
+- **Library Integration** - integrated remark plugins to convert markdown into HTML.
+
+## Screenshots
+
+*Homepage showing blog listing with Last Read sidebar widget*
+![Dev notes homepage](public/screenshots/listing_1.png)
+![Travel blog homepage](public/screenshots/listing_2.png)
+
+*Individual page*
+![Dev note](public/screenshots/blog_1.png)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the knowledge base.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To set your markdown folder, edit `src/config.ts`:
 
-## Learn More
+```typescript
+export const siteConfig = {
+  siteName: "Your Site Name",
+  siteDescription: "Your description", 
+  contentPath: "../your-content-folder",
+  author: "Your Name"
+};
+```
 
-To learn more about Next.js, take a look at the following resources:
+The app will automatically scan for `.md` files in the specified folder and create routes based on the file structure.
+For testing, we are using the folders `dev-content` and `travel-content` shipped with this demo.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Future
+- Image support (Not tested)
+- Theming
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## AI Use
+- Content used for the blogs ( `content` & `travel-content` ) is completely AI-generated.
+- AI assistance was leveraged for coding efficiency, but the project architecture, component design, and technical decisions are entirely my own.
