@@ -6,6 +6,10 @@ Transform your collection of markdown notes into a fully functional blog. Simply
 
 Obsidian-style `[[internal linking]]` is preserved and transformed into clickable web links, maintaining the interconnected nature of your knowledge base. As you read through different articles, the app tracks your reading history in a convenient sidebar widget, helping you pick up where you left off.
 
+## Live Demo
+
+**[View Demo](https://obsidian-next-lmx3.vercel.app/)** - using the [dev-content](./dev-content) folder
+
 ## Demonstrated Skills
 
 - **Next.js Rendering Strategy - Static Site Generation** -  SSG is used for the rarely changing content pages. Pages are pre-built at build time.
