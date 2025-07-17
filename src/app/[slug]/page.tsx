@@ -8,7 +8,7 @@ interface Params {
 }
 
 interface NotePageProps {
-  params: Params;
+  params: Promise<Params>;
 }
 
 export async function generateStaticParams() {
